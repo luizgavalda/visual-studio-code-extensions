@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 # Make coding more python3-ish
+from pathlib import Path
 from __future__ import absolute_import, division, print_function
 
 import os
@@ -22,7 +23,11 @@ def is_extension_installed(module, executable, name):
 
 
 def list_extension_dirs(module, executable):
-    dirname = '.vscode'
+    dir = str(Path.home()) + "/.vscode-oss"
+    if os.path.isdir(dir):
+        dirname = '.vscode-oss'
+    else:
+        dirname = '.vscode'
     if executable == 'code-insiders':
         dirname += '-insiders'
 
