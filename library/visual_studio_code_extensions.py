@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
 # Make coding more python3-ish
-from pathlib import Path
 from __future__ import absolute_import, division, print_function
 
+from pathlib import Path
 import os
 
 from ansible.module_utils.basic import AnsibleModule
